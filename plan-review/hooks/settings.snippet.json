@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/.claude/skills/plan-review/hooks/plan_review_hook.py\"",
+            "timeout": 360,
+            "statusMessage": "plan-review: revisando o plano (até ~1 min)..."
+          }
+        ]
+      }
+    ]
+  }
+}
